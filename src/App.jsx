@@ -5,6 +5,7 @@ import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 
 import IssueManagement from './Components/IssueManagement';
+import Spinner from './Components/Spinner';
 
 const fetchIssues = async () => {
   const fetchData = await fetch('/data.json');
@@ -17,15 +18,7 @@ function App() {
     <>
       <Navbar></Navbar>
 
-      {/* Box */}
-
-      {/* Button */}
-      {/* <ToggleBtn
-        toggleStatus={toggleStatus}
-        setToggleStatus={setToggleStatus}
-      ></ToggleBtn> */}
-
-      <Suspense fallback={<h1> Loading...</h1>}>
+      <Suspense fallback={<Spinner></Spinner>}>
         <IssueManagement fetchPromise={fetchPromise}></IssueManagement>
       </Suspense>
 

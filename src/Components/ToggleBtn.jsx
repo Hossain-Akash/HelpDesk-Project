@@ -7,7 +7,7 @@ const ToggleBtn = ({ toggleStatus, setToggleStatus }) => {
   return (
     <div>
       <Container>
-        <div className="text-right mb-12">
+        <div className="text-right mb-12 flex justify-end flex-col md:flex-row">
           {btns.map((btn, i) => (
             <button
               key={i}
